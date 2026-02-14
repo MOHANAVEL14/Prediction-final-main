@@ -76,7 +76,7 @@ export const crops: Record<string, CropVariety> = {
 };
 
 // Odisha Districts
-export const tamilNaduDistricts = [
+export const odishaDistricts = [
   'Ariyalur', 'Chengalpattu', 'Chennai', 'Coimbatore', 'Cuddalore', 'Dharmapuri', 
   'Dindigul', 'Erode', 'Kallakurichi', 'Kancheepuram', 'Kanniyakumari', 'Karur', 
   'Krishnagiri', 'Madurai', 'Mayiladuthurai', 'Nagapattinam', 'Namakkal', 'Nilgiris', 
