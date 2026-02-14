@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AgriCare Design System - Government of Odisha Agricultural Theme */
+
+@layer base {
+  :root {
+    /* Primary - Darker Heading Accent Green (#2E8A3E) */
+    --primary: 131 50% 36%;
+    --primary-foreground: 60 33% 96%;
+    
+    /* Background - Warm Cream */
+    --background: 45 33% 97%;
+    --foreground: 131 35% 15%;
+    
+    /* Card - Clean White with warmth */
+    --card: 45 25% 99%;
+    --card-foreground: 131 35% 15%;
+    
+    /* Popover */
+    --popover: 45 25% 99%;
+    --popover-foreground: 131 35% 15%;
+    
+    /* Secondary - Golden Wheat */
+    --secondary: 43 74% 49%;
+    --secondary-foreground: 131 35% 15%;
+    
+    /* Muted - Soft sage */
+    --muted: 120 12% 90%;
+    --muted-foreground: 131 20% 40%;
+    
+    /* Accent - Earth Brown */
+    --accent: 25 59% 30%;
+    --accent-foreground: 45 33% 96%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Success - Lush Green */
+    --success: 142 71% 35%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning - Harvest Gold */
+    --warning: 38 92% 50%;
+    --warning-foreground: 131 35% 15%;
+    
+    /* Info - Sky Blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    
+    /* Border & Input */
+    --border: 131 20% 85%;
+    --input: 131 20% 85%;
+    --ring: 122 38% 48%;
+    
+    --radius: 0.75rem;
+    /* Darkest green for emphasized text */
+    --darkest-green: #154d24;
+    
+    /* Custom AgriCare tokens */
+    --gradient-primary: linear-gradient(135deg, #bfe6c0 0%, #2E8A3E 100%);
+    --gradient-hero: linear-gradient(180deg, #bfe6c0 0%, #2E8A3E 100%);
+    --gradient-card: linear-gradient(145deg, hsl(45, 25%, 99%) 0%, hsl(45, 33%, 95%) 100%);
+    --gradient-golden: linear-gradient(135deg, hsl(43, 74%, 49%) 0%, hsl(38, 92%, 50%) 100%);
+    
+    --shadow-soft: 0 4px 20px -2px rgba(46,138,62,0.08);
+    --shadow-elevated: 0 12px 40px -8px rgba(46,138,62,0.16);
+    --shadow-glow: 0 0 40px hsl(43, 74%, 49%, 0.3);
+    
+    /* Sidebar */
+    --sidebar-background: 103 49% 92%;
+    --sidebar-foreground: 60 33% 96%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 131 35% 15%;
+    --sidebar-accent: 122 38% 48%;
+    --sidebar-accent-foreground: 60 33% 96%;
+    --sidebar-border: 102 50% 81%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    --background: 105 45% 88%;
+    --foreground: 45 33% 96%;
+    
+    --card: 103 49% 92%;
+    --card-foreground: 45 33% 96%;
+    
+    --popover: 103 49% 92%;
+    --popover-foreground: 45 33% 96%;
+    
+    --primary: 43 74% 55%;
+    --primary-foreground: 131 35% 10%;
+    
+    --secondary: 131 50% 36%;
+    --secondary-foreground: 45 33% 96%;
+    
+    --muted: 102 50% 81%;
+    --muted-foreground: 131 15% 60%;
+    
+    --accent: 43 70% 45%;
+    --accent-foreground: 131 35% 10%;
+    
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 60% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 85% 55%;
+    --warning-foreground: 131 35% 10%;
+    
+    --info: 199 80% 55%;
+    --info-foreground: 0 0% 100%;
+    
+    --border: 102 50% 81%;
+    --input: 102 50% 81%;
+    --ring: 43 74% 55%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(43, 74%, 55%) 0%, hsl(38, 85%, 50%) 100%);
+    --gradient-hero: linear-gradient(180deg, #d9eed2 0%, #8acb73 100%);
+    --gradient-card: linear-gradient(145deg, #e5f4df 0%, #c5e7b7 100%);
+    
+    --sidebar-background: 103 49% 92%;
+    --sidebar-foreground: 45 33% 96%;
+    --sidebar-primary: 43 74% 55%;
+    --sidebar-primary-foreground: 131 35% 10%;
+    --sidebar-accent: 122 38% 48%;
+    --sidebar-accent-foreground: 45 33% 96%;
+    --sidebar-border: 102 50% 81%;
+    --sidebar-ring: 43 74% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+  
+  .bg-gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background-image: var(--gradient-card);
+  }
+  
+  .bg-gradient-golden {
+    background-image: var(--gradient-golden);
+  }
+
+  /* Utility: darkest green text */
+  .text-darkest-green {
+    color: var(--darkest-green) !important;
+  }
+
+  /* Google Translate widget styling (green themed) */
+  .translate-widget {
+    position: absolute;
+    top: 4.5rem; /* slightly lower below header */
+    right: 1rem;
+    z-index: 60;
+  }
+
+  /* Container inside our widget - dark green themed */
+  #google_translate_element {
+    background: linear-gradient(180deg, #4DAA50, #2E8F3A);
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.6rem;
+    box-shadow: 0 8px 24px rgba(46,143,58,0.18);
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  /* Style the dropdown and text inside translate widget - keep dropdown readable */
+  #google_translate_element .goog-te-combo {
+    background: #ffffff !important;
+    border: 1px solid rgba(46,143,58,0.25) !important;
+    color: #2E8F3A !important; /* mic/icon green */
+    padding: 0.25rem 0.5rem !important;
+    border-radius: 0.375rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Remove default Google Translate banner if any */
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+
+  /* Tweak small elements the widget might inject */
+  .goog-te-gadget-simple {
+    background: transparent !important;
+    color: #ffffff !important;
+  }
+
+  /* Make sure the injected iframe or UI fits inside our container */
+  #google_translate_element .goog-te-gadget {
+    color: #ffffff !important;
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
+  
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out forwards;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { 
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full hover:bg-primary/50 transition-colors;
+}
+
+/* Form input focus states */
+input:focus, select:focus, textarea:focus {
+  @apply ring-2 ring-primary/20 border-primary;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-elevated hover:-translate-y-1;
+}
