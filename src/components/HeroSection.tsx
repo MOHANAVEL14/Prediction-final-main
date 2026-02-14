@@ -57,7 +57,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
                 AgriCare
               </h1>
               <p className="text-xs text-primary-foreground/70">
-                Government of Odisha
+                Government of Tamil Nadu
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onGetStarted }) => {
 
           <p className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto mb-10 leading-relaxed">
             AI-powered crop yield prediction, precision fertilizer
-            recommendations, and expert farming advice tailored for Odisha's
+            recommendations, and expert farming advice tailored for Tamil Nadu's
             unique agricultural landscape.
           </p>
 

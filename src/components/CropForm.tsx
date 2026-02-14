@@ -21,7 +21,7 @@ import {
 } from "@/components/ui/select";
 import {
   crops,
-  odishaDistricts,
+  tamilNaduDistricts,
   irrigationTypes,
   getCropVarieties,
 } from "@/lib/cropData";
@@ -186,7 +186,7 @@ const CropForm: React.FC<CropFormProps> = ({ formData, onFormChange }) => {
                 <SelectValue placeholder="Select district" />
               </SelectTrigger>
               <SelectContent>
-                {odishaDistricts.map((district) => (
+                {tamilNaduDistricts.map((district) => (
                   <SelectItem key={district} value={district}>
                     {district}
                   </SelectItem>
